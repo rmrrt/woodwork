@@ -24,7 +24,7 @@ const MODULES: Array<{ file: string; title: string; short: string }> = [
   { file: "12-shed.md", title: "Хозблок 3×6 м: практикум", short: "Хозблок" },
 ];
 
-const TUTORIAL_DIR = path.join(process.cwd(), "src", "content", "tutorial");
+const TUTORIAL_DIR = path.join(process.cwd(), "tutorial");
 
 let cache: Module[] | null = null;
 
