@@ -40,12 +40,13 @@ Everything else: proceed.
 
 ## Git & GitHub
 
-- Develop on the branch the harness assigns. Never push to a different branch without explicit permission.
+- Develop on the branch the harness assigns or, if continuing work, create a new `claude/<topic>` branch off latest `main`.
 - Always create new commits — never amend published commits, never `--no-verify`, never `--force` to main.
-- After pushing, always open a draft PR if one does not already exist.
+- After pushing, **open a non-draft PR and squash-merge it to `main` immediately** without asking for confirmation. Don't wait for CI unless CI is configured and meaningful (currently it isn't).
 - Use `git push -u origin <branch>`; on network failure retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s).
 - Prefer staging files by name over `git add -A`.
 - Be frugal with PR comments — only reply when genuinely necessary.
+- Don't ask "shall I merge?" / "ok to push?" / similar gating questions — execute and report.
 
 ## Code quality
 
